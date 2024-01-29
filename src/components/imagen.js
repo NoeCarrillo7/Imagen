@@ -2,20 +2,34 @@ import { useState } from "react"
 
 
 export function Imagen(){
-    /*var [img, setImg] = useState(0);
-        
+    var [img, setImg] = useState("/images/puerta1.jpg");
+
+    function abierta() {
+        if (img === ("/images/puerta1.jpg")) {
+            setImg("/images/puerta2.jpg");
+        } else {
+            setImg("/images/puerta1.jpg");
+        }
+    }
+    return (
+        <>
+            <p> <img src={process.env.PUBLIC_URL + img} alt="Puerta" /> </p>
+            <button onClick={abierta}>Abrir/Cerrar</button>
+        </>
+    );
+    /*var [img, setImg] = useState([{"./public/images/puerta1.jpg"}]);
     function abierta(){
-        setImg(0);
+        if(img === [puerta1]){
+            setImg([puerta2]);
+        }
+        else{
+            setImg([puerta1]);
+        }  
     }
-    function cerrada(){
-        setImg2(img2);
-    }
-    
     return(
         <>
-            <p> <img src={process.env.PUBLIC_URL + "./public/images/puerta2.jpg" } alt="des"/> </p>
+            <p> <img src={process.env.PUBLIC_URL + "./public/images/puerta2.jpg" } /> </p>
             <button onClick={abierta}>abierta</button>
-            <button onClick={cerrada}>cerrada</button>
         </>
     )*/
 }
